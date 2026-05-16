@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performance Auto Center &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="Performance Auto Center, 50 years family-owned (founded 1976) luxury European specialist with Craig Behrens ASE Master plus Acura / Honda / Lexus / Toyota advanced and Pat Kirchens ASE Master plus BMW / Mercedes / Porsche advanced and 30 years industry, surfaces in zero of five AI Overview queries about the best BMW, Mercedes, Porsche, or European specialist near O'Hare. Absent from BimmerShops, BenzShops, and Pcarwise. Audit and 90-day plan to capture the five lanes the credential stack already earns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f7f5f0;
+  --cream: #fbf8f1;
+  --bone: #e8e3d6;
+  --blue: #1a3a5c;
+  --blue-deep: #0e2742;
+  --ink: #14171c;
+  --ink-deep: #0a0e14;
+  --ink-soft: #4a525e;
+  --chrome: #b7bcc4;
+  --chrome-deep: #8d94a3;
+  --steel: #5e6772;
+  --red: #a32128;
+  --red-deep: #74161c;
+  --line: #d2cdc0;
+  --green: #3f6e3a;
+  --white: #ffffff;
+  --display: 'Bebas Neue', sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--white); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.topbar { background: var(--ink-deep); color: var(--paper); padding: 12px 0; font-size: 13px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.topbar-tag { color: var(--chrome); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 11px; }
+
+.hero { padding: 110px 0 80px; background: var(--paper); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 5%; right: -10%; width: 720px; height: 720px; background: radial-gradient(circle, rgba(26, 58, 92, 0.18), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero-grid { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--steel); font-weight: 700; margin-bottom: 26px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 6vw, 72px); line-height: 1.04; letter-spacing: -0.015em; margin-bottom: 32px; color: var(--ink); }
+.hero h1 em { font-style: italic; color: var(--blue); }
+.hero p { color: var(--ink-soft); font-size: 19px; max-width: 860px; line-height: 1.55; }
+
+.section { padding: 90px 0; position: relative; }
+.section.alt { background: var(--bone); }
+.section.dark { background: var(--ink); color: var(--white); }
+.section.dark .section-title { color: var(--chrome); }
+.section.dark .section-sub { color: rgba(255, 255, 255, 0.78); }
+.section-title { font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.015em; line-height: 1.05; margin-bottom: 18px; color: var(--ink); }
+.section-title em { font-style: italic; color: var(--blue); }
+.section.dark .section-title em { color: var(--chrome); }
+.section-sub { color: var(--ink-soft); font-size: 17px; margin-bottom: 56px; max-width: 860px; line-height: 1.6; }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.compare-card { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+.compare-card:hover { border-color: var(--blue); transform: translateY(-4px); box-shadow: 0 20px 56px rgba(22, 27, 34, 0.18); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.compare-label.current { background: rgba(163, 33, 40, 0.10); color: var(--red-deep); border-bottom: 1px solid rgba(163, 33, 40, 0.18); }
+.compare-label.new { background: rgba(26, 58, 92, 0.10); color: var(--blue-deep); border-bottom: 1px solid var(--blue); }
+.compare-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.compare-preview-content { position: relative; z-index: 2; text-align: center; padding: 32px; }
+.compare-preview-content h3 { font-family: var(--display); font-size: 38px; font-weight: 400; letter-spacing: 2px; }
+.compare-preview-content p { font-family: var(--serif); font-size: 16px; font-style: italic; margin-top: 12px; }
+.compare-preview.current-bg { background: linear-gradient(135deg, var(--bone), var(--cream)); }
+.compare-preview.current-bg .compare-preview-content h3 { color: var(--red-deep); }
+.compare-preview.current-bg .compare-preview-content p { color: var(--ink-soft); }
+.compare-preview.new-bg { background: linear-gradient(135deg, var(--blue), var(--blue-deep) 55%, var(--ink)); }
+.compare-preview.new-bg .compare-preview-content h3 { color: var(--white); }
+.compare-preview.new-bg .compare-preview-content p { color: rgba(255, 255, 255, 0.88); }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 26px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
+.compare-body p { color: var(--ink-soft); font-size: 14px; margin-bottom: 22px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 7px 0; font-size: 14px; color: var(--ink-soft); display: flex; align-items: flex-start; gap: 10px; }
+.compare-body li::before { font-size: 12px; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+.current li::before { content: '\2717'; color: var(--red-deep); }
+.new li::before { content: '\2713'; color: var(--green); }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 2px solid var(--red-deep); color: var(--red-deep); }
+.cta-current:hover { background: var(--red-deep); color: var(--white); }
+.cta-new { background: var(--blue); color: var(--white); }
+.cta-new:hover { background: var(--blue-deep); color: var(--white); }
+
+.bombshell-section { background: var(--ink); color: var(--white); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: center; }
+.bombshell-stat { font-family: var(--display); font-size: clamp(120px, 14vw, 220px); font-weight: 400; line-height: 0.9; color: var(--chrome); letter-spacing: 2px; }
+.bombshell-stat-label { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255, 255, 255, 0.62); margin-top: 18px; font-weight: 600; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(32px, 4vw, 54px); font-weight: 700; line-height: 1.06; margin-bottom: 26px; color: var(--white); }
+.bombshell-content h2 em { font-style: italic; color: var(--chrome); }
+.bombshell-content p { color: rgba(255, 255, 255, 0.86); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.bombshell-content p strong { color: var(--white); font-weight: 700; }
+.lane-list { margin-top: 28px; padding: 22px 26px; background: rgba(199, 204, 214, 0.10); border-left: 2px solid var(--chrome); border-radius: 2px; }
+.lane-list-title { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--chrome); font-weight: 700; margin-bottom: 14px; }
+.lane-row { display: flex; justify-content: space-between; padding: 7px 0; font-size: 14px; color: rgba(255, 255, 255, 0.82); border-bottom: 1px solid rgba(199, 204, 214, 0.12); }
+.lane-row:last-child { border-bottom: none; }
+.lane-row .rank-win { color: var(--green); font-weight: 700; }
+.lane-row .rank-loss { color: var(--chrome); font-weight: 700; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 32px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--blue); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26, 58, 92, 0.12); }
+.plan-num { font-family: var(--display); font-size: 14px; color: var(--blue); font-weight: 400; margin-bottom: 14px; display: block; letter-spacing: 2px; }
+.plan-card h4 { font-family: var(--serif); font-size: 22px; font-weight: 700; line-height: 1.15; margin-bottom: 12px; color: var(--ink); }
+.plan-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--steel); font-weight: 700; margin-top: 18px; display: inline-block; }
+
+.scorecard { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 22px 32px; background: var(--bone); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--ink); }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: var(--paper); }
+.scorecard-label { font-size: 15px; color: var(--ink); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--red-deep); }
+.scorecard-cell.new { color: var(--green); font-weight: 700; }
+
+.cta-section { padding: 120px 0; text-align: center; background: var(--paper); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 26px; line-height: 1.05; color: var(--ink); }
+.cta-section h2 em { font-style: italic; color: var(--blue); }
+.cta-section p { color: var(--ink-soft); font-size: 17px; margin-bottom: 40px; max-width: 680px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--blue); color: var(--white); }
+.cta-button.primary:hover { background: var(--blue-deep); transform: translateY(-2px); }
+.cta-button.ghost { border: 2px solid var(--line); color: var(--blue); background: var(--white); }
+.cta-button.ghost:hover { border-color: var(--chrome); color: var(--steel); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--ink-soft); background: var(--bone); }
+footer a { color: var(--blue); }
+
+@media (max-width: 1024px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-tag">Search Audit Report &middot; Prepared by AG1 Consulting</span>
+    <span>For Craig Behrens and Pat Kirchens, Performance Auto Center</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <span class="eyebrow">Prepared for Craig Behrens and Pat Kirchens &middot; AG1 Consulting</span>
+      <h1>Performance Auto Center loses every AI-search answer for BMW, Mercedes, Porsche, Lexus, and European-specialist queries near O'Hare. <em>Absent from BimmerShops, BenzShops, and Pcarwise.</em></h1>
+      <p>Performance Auto Center has been at 1051 Bonaventure Drive in Elk Grove Village for 50 years, family-owned, with Craig Behrens ASE Master plus Acura, Honda, Lexus, and Toyota advanced certs and Pat Kirchens ASE Master plus BMW, Mercedes-Benz, and Porsche advanced certs and 30 years in the industry. CARFAX rates the shop 5 of 5 across 283 reviews. None of that surfaces in the five queries an AI Overview, a Schaumburg BMW owner, or a Hoffman Estates Mercedes owner types tonight. Performance Auto Center is also absent from BimmerShops, BenzShops, and Pcarwise, the three independent-specialist directories AI engines crawl first for European-marque indie recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Performance Auto Center: <em>before vs after</em></h2>
+    <p class="section-sub">Same 1051 Bonaventure Drive flagship. Same Plainfield co-location. Same ASE Master tier on both partners. Same seven manufacturer advanced certifications. Same 5 of 5 CARFAX across 283 reviews. Two very different chances of being the indie European specialist an AI Overview, a Schaumburg BMW owner, or an Inverness Porsche owner finds first when they ask tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Site</div>
+        <div class="compare-preview current-bg">
+          <div class="compare-preview-content">
+            <h3>performanceautocenter.com</h3>
+            <p>Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The site runs on a LinkNow Media template stack. The brand and the staff page mention Craig Behrens and Pat Kirchens with their credential stack, but the AEO infrastructure that decides who wins the "best independent BMW near O'Hare" answer, the "Mercedes specialist Elk Grove Village" intent, the "Porsche mechanic Schaumburg" query, and the "European car specialist Elk Grove" citation is absent. The shop is also missing from BimmerShops, BenzShops, and Pcarwise.</p>
+          <ul>
+            <li>Wins 0 of 5 AI Overview lanes despite the credential stack and the 25-plus-year family-owned heritage. Mehta Motors and 7th Gear win the BMW indie answer via BimmerShops. BenzShops wins the Mercedes answer. Eric's Auto Lab wins the Porsche answer. O'Hare Auto Body and the AAA directory win the generic O'Hare query. Yelp and Yellowpages win the European-specialist query.</li>
+            <li>Absent from BimmerShops (the BMW indie shop directory AI engines crawl first), BenzShops (the Mercedes indie shop directory), and Pcarwise (the Porsche indie shop directory). Pat Kirchens has the manufacturer advanced cert in all three marques and none of the three directories list the shop.</li>
+            <li>No AutomotiveBusiness, AutoRepair, LocalBusiness, or Organization schema on either storefront. AI engines see one ambiguous "Performance Auto Center" entity and cannot distinguish the ORD-corridor Elk Grove Village flagship from the Plainfield co-location.</li>
+            <li>No Person schema for Craig Behrens (ASE Master + Acura / Honda / Lexus / Toyota advanced) or Pat Kirchens (ASE Master + BMW / Mercedes / Porsche advanced + 30 yr industry), and no EducationalOccupationalCredential schema for either ASE Master tier or for the seven manufacturer advanced certs.</li>
+            <li>No Service schema for BMW, Mercedes-Benz, Porsche, Lexus, Acura, Honda, Toyota, or the cross-marque diagnostic and brake / suspension work, which is how AI engines route service-intent queries.</li>
+            <li>No FAQPage schema. None of the credential, location, marque, pricing, or CARFAX-rating questions a luxury European owner types into ChatGPT have a structured answer on the site.</li>
+            <li>No ORD-corridor authority page with structured Service-area declarations across Elk Grove Village 60007, Schaumburg 60173, Itasca 60143, Bensenville 60106, Wood Dale 60191, Des Plaines 60018, Park Ridge 60068, and the Hoffman Estates / Inverness corridor.</li>
+            <li>LinkNow Media template stack does not ship the schema graph, the per-marque Service pages, the per-partner Person pages, or the 40-word answer blocks AI engines lift verbatim.</li>
+            <li>CARFAX 5 of 5 across 283 reviews is on the CARFAX directory only and not structured as AggregateRating schema on performanceautocenter.com.</li>
+          </ul>
+          <a href="https://www.performanceautocenter.com/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; AEO + Credential Build</div>
+        <div class="compare-preview new-bg">
+          <div class="compare-preview-content">
+            <h3>The credential-anchored engine</h3>
+            <p>Click to explore the live demo &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>An AEO-targeted "50 years family-owned (founded 1976), six miles from O'Hare, ASE Master plus BMW / Mercedes / Porsche advanced certified" funnel that captures the five lanes the credential stack already earns. BimmerShops + BenzShops + Pcarwise directory inclusion in week 1. Full schema graph in week 2. Marque-specific Service and FAQ surfaces in week 3 through 6. Performance gate: cited in at least 3 of 5 AI queries by day 90.</p>
+          <ul>
+            <li>BimmerShops, BenzShops, and Pcarwise directory submissions with Pat Kirchens's BMW, Mercedes-Benz, and Porsche advanced certifications surfaced. AAA indie locator, CARFAX Service Shop Directory, and the Lexus and Acura indie locator networks cross-listed.</li>
+            <li>Full AutomotiveBusiness + AutoRepair + LocalBusiness + Organization + FAQPage schema across the site, with per-location nodes for the Elk Grove Village flagship and the Plainfield co-location.</li>
+            <li>Person schema for Craig Behrens (ASE Master + Acura / Honda / Lexus / Toyota advanced) and Pat Kirchens (ASE Master + BMW / Mercedes / Porsche advanced + 30 yr industry), each with EducationalOccupationalCredential schema per individual certification, linked to the issuing organization (ASE, BMW NA, Mercedes-Benz USA, Porsche Cars North America, Acura, Honda, Lexus, Toyota).</li>
+            <li>Service schema for BMW repair, Mercedes-Benz repair, Porsche repair, Lexus repair, Acura repair, Honda repair, Toyota repair, and the cross-marque diagnostic and brake / suspension work.</li>
+            <li>FAQPage on the homepage, the two storefront pages, and the five marque pages covering credential questions, location questions, pricing-context questions, pre-purchase-inspection questions, and the CARFAX 5 of 5 rating.</li>
+            <li>ORD-corridor authority page with structured Service-area declarations across the eight-zip catchment surrounding the Elk Grove Village flagship.</li>
+            <li>Per-partner Person pages tuned for the queries "ASE Master Certified BMW mechanic Elk Grove Village" and "Porsche-certified independent shop Chicago suburbs," pre-publication review by Craig and Pat.</li>
+            <li>40-word answer blocks AI engines lift verbatim into Overview answers about "best independent BMW repair near O'Hare," "Mercedes specialist Elk Grove Village," "Porsche mechanic Schaumburg," "European car specialist Elk Grove," and "best auto repair near O'Hare airport."</li>
+            <li>AggregateRating schema surfacing the CARFAX 5 of 5 rating across 283 reviews on the homepage and on each marque page.</li>
+            <li>Performance gate: cited in at least 3 of 5 AI queries by day 90, or work continues at no additional cost.</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat">0/5</div>
+        <div class="bombshell-stat-label">AI Overview lanes Performance Auto Center wins today. Absent from BimmerShops, BenzShops, and Pcarwise despite Craig's ASE Master plus four manufacturer advanced certs and Pat's ASE Master plus BMW / Mercedes / Porsche advanced certs and 30 years in the industry.</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>50 years family-owned (founded 1976). <em>And invisible to every AI engine that recommends a BMW or Mercedes shop near O'Hare.</em></h2>
+        <p>We asked ChatGPT, Perplexity, and Google AI Overviews five buyer queries on May 16, 2026: best independent BMW repair near O'Hare, Mercedes specialist Elk Grove Village, Porsche mechanic Schaumburg, best auto repair near O'Hare airport, and European car specialist Elk Grove. Performance Auto Center surfaced in <strong>zero of five</strong>. The answer-box real estate went to a BimmerShops directory listing (Mehta Motors and 7th Gear), a BenzShops directory, Eric's Auto Lab in Schaumburg on Porsche, O'Hare Auto Body and an AAA directory on the generic ORD query, and a Yelp / Yellowpages directory on the European-specialist query.</p>
+        <p>The reason is mechanical, not reputational. Performance Auto Center is <strong>absent from BimmerShops, BenzShops, and Pcarwise</strong>, the three independent-specialist directories AI engines crawl first when answering "indie BMW shop near me," "Mercedes specialist near me," or "Porsche independent near me." The credential stack is real and verifiable on the staff page: Craig Behrens ASE Master plus Acura / Honda / Lexus / Toyota advanced certs, Pat Kirchens ASE Master plus BMW / Mercedes / Porsche advanced certs plus 30 years in the industry. The fix is directory submission, schema markup of the credential entities, marque-specific Service pages, and an ORD-corridor authority page.</p>
+        <div class="lane-list">
+          <div class="lane-list-title">The five lanes &middot; What Performance Auto Center captures today</div>
+          <div class="lane-row"><span>1. Best independent BMW repair near O'Hare</span><span class="rank-loss">Missed</span></div>
+          <div class="lane-row"><span>2. Mercedes specialist Elk Grove Village</span><span class="rank-loss">Missed</span></div>
+          <div class="lane-row"><span>3. Porsche mechanic Schaumburg</span><span class="rank-loss">Missed (2nd mention)</span></div>
+          <div class="lane-row"><span>4. Best auto repair near O'Hare airport</span><span class="rank-loss">Missed</span></div>
+          <div class="lane-row"><span>5. European car specialist Elk Grove</span><span class="rank-loss">Missed</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. BimmerShops + BenzShops + Pcarwise directory submissions in week 1. Schema graph in week 2. Marque-specific Service and FAQ surfaces in week 3 through 6. ORD-corridor authority page and per-partner Person surfaces in week 4 through 12. By day 90, Performance Auto Center captures three or four of the five lanes the credential stack has earned.</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-num">Phase 01</span>
+        <h4>Directory Inclusion</h4>
+        <p>BimmerShops + BenzShops + Pcarwise submissions with Pat Kirchens's BMW, Mercedes-Benz, and Porsche advanced certs surfaced. AAA, CARFAX, Lexus and Acura indie locator cross-listings.</p>
+        <span class="plan-week">Week 1</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 02</span>
+        <h4>AEO Schema Graph</h4>
+        <p>Organization, AutomotiveBusiness, AutoRepair, LocalBusiness, FAQPage schema. Person schema for Craig + Pat. EducationalOccupationalCredential schema per individual certification. Service schema per marque. AggregateRating from CARFAX 5 of 5.</p>
+        <span class="plan-week">Weeks 2 to 3</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 03</span>
+        <h4>Marque + Location Pages</h4>
+        <p>Per-marque Service pages (BMW, Mercedes-Benz, Porsche, Lexus, Acura, Honda, Toyota). Per-location pages (Elk Grove Village flagship, Plainfield co-location) with FAQPage and service-area declarations.</p>
+        <span class="plan-week">Weeks 3 to 6</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 04</span>
+        <h4>ORD-Corridor Authority</h4>
+        <p>ORD-corridor authority page with structured Service-area declarations. Per-partner Person pages. Press placement (Chicago Tribune Cars, Daily Herald Northwest Suburbs). BMW / Mercedes / Porsche owners' club outreach.</p>
+        <span class="plan-week">Weeks 4 to 12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal AI search, a Schaumburg BMW owner, a Hoffman Estates Mercedes owner, and an Inverness Porsche owner check, the current performanceautocenter.com graded against the 90-day rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After plan</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">BimmerShops directory listing</div><div class="scorecard-cell current">&times; Absent</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">BenzShops directory listing</div><div class="scorecard-cell current">&times; Absent</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Pcarwise / Porsche indie directory listing</div><div class="scorecard-cell current">&times; Absent</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Organization + AutomotiveBusiness + AutoRepair schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">LocalBusiness schema per location (Elk Grove Village + Plainfield)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Two nodes</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Craig Behrens Person + ASE Master + Acura / Honda / Lexus / Toyota advanced credential schema</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Pat Kirchens Person + ASE Master + BMW / Mercedes / Porsche advanced credential schema</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Service schema per marque (BMW, MB, Porsche, Lexus, Acura, Honda, Toyota)</div><div class="scorecard-cell current">&times; Plain HTML</div><div class="scorecard-cell new">&check; Seven nodes</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage schema on homepage + marque pages</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Eight pages</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AggregateRating schema (CARFAX 5 of 5 across 283 reviews)</div><div class="scorecard-cell current">&times; Off-site only</div><div class="scorecard-cell new">&check; On-site</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">ORD-corridor authority page with Service-area declarations</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Per-partner Person pages with credential stack</div><div class="scorecard-cell current">&times; Staff blurb only</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">40-word answer blocks (AI lift)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 10+ pages</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Best independent BMW repair near O'Hare" rank</div><div class="scorecard-cell current">Not surfaced</div><div class="scorecard-cell new">Top 3 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Mercedes specialist Elk Grove Village" rank</div><div class="scorecard-cell current">Not surfaced</div><div class="scorecard-cell new">Top 3 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Porsche mechanic Schaumburg" rank</div><div class="scorecard-cell current">2nd mention</div><div class="scorecard-cell new">Top 2 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AI Overview citation rate (5 queries)</div><div class="scorecard-cell current">0 of 5</div><div class="scorecard-cell new">3 to 4 of 5</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Site stack</div><div class="scorecard-cell current">LinkNow Media template</div><div class="scorecard-cell new">Schema-first rebuild</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Design tier</div><div class="scorecard-cell current">C</div><div class="scorecard-cell new">A+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Performance Auto Center has had Pat's BMW + Mercedes + Porsche advanced certs and Craig's ASE Master on the floor for years. The credentials are real. The <em>search</em> isn't.</h2>
+    <p>Mehta Motors and 7th Gear and Eric's Auto Lab are not winning because their credential stack is deeper or their tenure is longer. They are winning on BimmerShops directory inclusion, on schema, and on per-marque Service surfaces. Let's fix that for Craig, Pat, and the Performance Auto Center team before the Illinois pre-winter service window opens in late September.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/#services">andrei170.github.io/ag1</a></span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Auto Center &middot; 25+ Years Family-Owned Luxury European Specialist, 6 Miles From O'Hare &middot; Elk Grove Village &amp; Plainfield IL</title>
+  <meta name="description" content="Performance Auto Center is a family-owned, two-partner independent specialist for BMW, Mercedes-Benz, Porsche, Lexus, and domestic high-end work, six miles southwest of O'Hare in Elk Grove Village Illinois. ASE Master Certified technicians. Craig Behrens (Acura / Honda / Lexus / Toyota advanced). Pat Kirchens (BMW / Mercedes / Porsche advanced, 30 years industry). 5 of 5 CARFAX across 283 reviews.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gloss: #0a0d14;
+      --gloss-deep: #050810;
+      --carbon: #131722;
+      --carbon-light: #1c2230;
+      --steel: #2a3142;
+      --line: #2f3648;
+      --bone: #ececef;
+      --cream: #f7f4ec;
+      --muted: #8a90a0;
+      --blue: #4f7cc6;
+      --blue-deep: #2a5394;
+      --blue-soft: rgba(79, 124, 198, 0.16);
+      --chrome: #c7ccd6;
+      --chrome-deep: #8d94a3;
+      --green: #38a169;
+      --display: 'Oswald', sans-serif;
+      --serif: 'Source Serif Pro', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--gloss); color: var(--bone); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    .announce { background: var(--gloss-deep); color: var(--muted); padding: 11px 0; text-align: center; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+    .announce strong { color: var(--blue); letter-spacing: 0.2em; }
+
+    header { position: sticky; top: 0; z-index: 50; background: rgba(10, 13, 20, 0.94); backdrop-filter: blur(14px); padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--cream); letter-spacing: 0.06em; line-height: 1.1; text-transform: uppercase; }
+    .brand em { font-family: var(--serif); font-style: italic; color: var(--blue); font-weight: 600; text-transform: none; font-size: 18px; }
+    .brand small { display: block; font-family: var(--sans); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); margin-top: 4px; font-weight: 600; }
+    .nav-links { display: flex; gap: 26px; font-size: 13px; font-weight: 500; color: var(--bone); }
+    .nav-links a { transition: color 0.2s; letter-spacing: 0.04em; }
+    .nav-links a:hover { color: var(--blue); }
+    .cta-btn { background: var(--blue); color: var(--cream); padding: 12px 22px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: all 0.2s; border: 2px solid var(--blue); }
+    .cta-btn:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+    @media (max-width: 960px) { .nav-links { display: none; } }
+
+    .hero { padding: 110px 0 130px; background: radial-gradient(circle at 30% 20%, var(--carbon-light) 0%, var(--gloss) 60%); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -160px; right: -160px; width: 720px; height: 720px; background: radial-gradient(circle, rgba(79, 124, 198, 0.18), transparent 65%); filter: blur(40px); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -120px; left: -200px; width: 640px; height: 640px; background: radial-gradient(circle, rgba(199, 204, 214, 0.05), transparent 65%); filter: blur(60px); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 2; }
+    @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 22px; }
+    .hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 5.6vw, 70px); line-height: 1.04; letter-spacing: -0.02em; color: var(--cream); margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--blue); }
+    .hero-sub { font-size: 18px; color: var(--bone); margin-bottom: 32px; max-width: 600px; line-height: 1.65; }
+    .hero-features { display: flex; gap: 22px; margin-bottom: 36px; flex-wrap: wrap; }
+    .hero-feature { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--cream); }
+    .hero-feature::before { content: '\2713'; color: var(--blue); font-weight: 700; font-size: 16px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .cta-link { display: inline-flex; align-items: center; gap: 8px; padding: 16px 30px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: all 0.25s; }
+    .cta-link.primary { background: var(--blue); color: var(--cream); border: 2px solid var(--blue); }
+    .cta-link.primary:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+    .cta-link.ghost { background: transparent; color: var(--cream); border: 2px solid var(--line); }
+    .cta-link.ghost:hover { background: var(--carbon-light); border-color: var(--blue); }
+    .hero-vis { aspect-ratio: 4/5; background: linear-gradient(160deg, var(--carbon) 0%, var(--gloss-deep) 60%, var(--blue-deep) 110%); border-radius: 4px; padding: 56px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6); }
+    .hero-vis::before { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(199, 204, 214, 0.30); border-radius: 2px; pointer-events: none; }
+    .hero-vis-eyebrow { font-family: var(--display); font-size: 12px; letter-spacing: 0.36em; color: var(--blue); position: relative; margin-bottom: 22px; }
+    .hero-vis-num { font-family: var(--serif); font-size: clamp(80px, 9vw, 130px); font-weight: 700; color: var(--cream); position: relative; line-height: 0.95; letter-spacing: -0.02em; }
+    .hero-vis-num em { font-style: italic; color: var(--blue); }
+    .hero-vis-rule { width: 56px; height: 2px; background: var(--blue); margin: 24px auto 18px; opacity: 0.95; }
+    .hero-vis-mark { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--cream); position: relative; }
+    .hero-vis-since { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cream); opacity: 0.7; margin-top: 14px; position: relative; }
+
+    .trust { background: var(--carbon); padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; text-align: center; }
+    @media (max-width: 900px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+    .trust-num { font-family: var(--serif); font-size: 40px; font-weight: 700; color: var(--blue); line-height: 1; letter-spacing: -0.02em; display: block; }
+    .trust-num em { font-style: italic; color: var(--cream); }
+    .trust-lbl { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-top: 12px; font-weight: 600; line-height: 1.5; }
+
+    section { padding: 110px 0; }
+    .section-header { text-align: center; max-width: 780px; margin: 0 auto 64px; }
+    .section-title { font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.06; letter-spacing: -0.02em; color: var(--cream); margin-bottom: 18px; }
+    .section-title em { font-style: italic; color: var(--blue); }
+    .section-sub { font-size: 17px; color: var(--bone); line-height: 1.65; }
+
+    .services { background: var(--gloss); }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .services-grid { grid-template-columns: 1fr; } }
+    .service { background: var(--carbon); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; transition: all 0.3s; }
+    .service:hover { border-color: var(--blue); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5); }
+    .service-vis { aspect-ratio: 4/5; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .service-vis.bmw { background: linear-gradient(160deg, #0e1c2e 0%, #050810 100%); }
+    .service-vis.mb { background: linear-gradient(160deg, #1a2233 0%, #060810 100%); }
+    .service-vis.porsche { background: linear-gradient(160deg, #1d1a20 0%, #07050a 100%); }
+    .service-vis.lexus { background: linear-gradient(160deg, #15202e 0%, #05080e 100%); }
+    .service-frame { width: 64%; height: 78%; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(79, 124, 198, 0.30); border-radius: 4px; position: relative; display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .service-label { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--cream); background: rgba(10, 13, 20, 0.85); padding: 6px 14px; border-radius: 2px; }
+    .service-tag { position: absolute; top: 14px; right: 14px; background: var(--blue); color: var(--cream); padding: 5px 12px; border-radius: 99px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .service-tag.steel-tag { background: var(--steel); color: var(--cream); }
+    .service-body { padding: 24px 24px 26px; }
+    .service-name { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+    .service-note { font-size: 13px; color: var(--bone); margin-bottom: 16px; line-height: 1.55; }
+    .service-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0 14px; border-top: 1px solid var(--line); margin-bottom: 14px; }
+    .service-range { font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--blue); }
+    .service-size { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .service-cta { display: block; text-align: center; padding: 12px; background: var(--gloss-deep); color: var(--cream); border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.2s; border: 1px solid var(--line); }
+    .service-cta:hover { background: var(--blue); color: var(--cream); border-color: var(--blue); }
+
+    .ord-block { background: var(--gloss-deep); }
+    .ord-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: center; }
+    @media (max-width: 960px) { .ord-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .ord-stat { font-family: var(--display); font-size: clamp(120px, 14vw, 220px); line-height: 0.9; color: var(--blue); letter-spacing: 2px; }
+    .ord-stat-label { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-top: 18px; font-weight: 600; line-height: 1.6; }
+    .ord-content h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 4.2vw, 54px); line-height: 1.08; margin-bottom: 26px; color: var(--cream); }
+    .ord-content h2 em { font-style: italic; color: var(--blue); }
+    .ord-content p { font-size: 17px; color: var(--bone); margin-bottom: 16px; line-height: 1.7; }
+    .ord-content p strong { color: var(--cream); }
+    .corridor-list { margin-top: 26px; padding: 22px 26px; background: rgba(79, 124, 198, 0.08); border-left: 2px solid var(--blue); border-radius: 2px; }
+    .corridor-list-title { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 14px; }
+    .corridor-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; color: var(--bone); border-bottom: 1px solid rgba(79, 124, 198, 0.12); gap: 14px; }
+    .corridor-row:last-child { border-bottom: none; }
+    .corridor-row .miles { color: var(--blue); font-weight: 700; white-space: nowrap; }
+
+    .locations { background: var(--carbon); }
+    .locations-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .locations-grid { grid-template-columns: 1fr; } }
+    .location-card { background: var(--gloss); border: 1px solid var(--line); border-radius: 4px; padding: 36px 36px 38px; transition: all 0.3s; position: relative; }
+    .location-card:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5); }
+    .location-flag { display: inline-block; padding: 5px 12px; background: var(--carbon-light); color: var(--muted); border-radius: 99px; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+    .location-flag.flagship { background: var(--blue); color: var(--cream); }
+    .location-name { font-family: var(--serif); font-size: 26px; font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 6px; }
+    .location-year { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--blue); margin-bottom: 16px; }
+    .location-address { font-size: 14px; color: var(--cream); margin-bottom: 10px; line-height: 1.5; font-weight: 500; }
+    .location-meta { font-size: 13px; color: var(--bone); line-height: 1.6; padding-top: 14px; border-top: 1px solid var(--line); }
+    .location-services { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .location-service-tag { font-size: 10px; letter-spacing: 0.1em; padding: 4px 10px; background: var(--carbon-light); color: var(--blue); border-radius: 2px; font-weight: 600; text-transform: uppercase; }
+
+    .partners { background: var(--gloss); }
+    .partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .partners-grid { grid-template-columns: 1fr; } }
+    .partner-card { background: var(--carbon); border: 1px solid var(--line); border-radius: 4px; padding: 38px 34px; transition: all 0.3s; }
+    .partner-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+    .partner-portrait { aspect-ratio: 3/2; background: linear-gradient(160deg, var(--carbon-light) 0%, var(--gloss-deep) 80%, var(--blue-deep) 120%); border-radius: 2px; margin-bottom: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; }
+    .partner-portrait::before { content: ''; position: absolute; inset: 10px; border: 1px solid rgba(199, 204, 214, 0.18); border-radius: 2px; }
+    .partner-portrait-name { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--cream); position: relative; }
+    .partner-portrait-tier { font-family: var(--display); font-size: 12px; letter-spacing: 0.34em; color: var(--blue); margin-top: 8px; position: relative; }
+    .partner-name { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+    .partner-title { font-size: 13px; color: var(--blue); letter-spacing: 0.04em; margin-bottom: 18px; font-weight: 600; text-transform: uppercase; }
+    .partner-bio { font-size: 14px; color: var(--bone); line-height: 1.7; margin-bottom: 18px; }
+    .credentials { padding-top: 18px; border-top: 1px solid var(--line); }
+    .credentials-title { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 12px; }
+    .credential { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; font-size: 13px; color: var(--cream); }
+    .credential::before { content: '\2713'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    .marque-section { background: var(--gloss-deep); }
+    .marque-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .marque-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .marque-grid { grid-template-columns: 1fr; } }
+    .marque-card { padding: 30px 26px; background: var(--carbon); border: 1px solid var(--line); border-radius: 4px; transition: all 0.3s; }
+    .marque-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+    .marque-gen { font-family: var(--display); font-size: 12px; letter-spacing: 0.3em; color: var(--blue); text-transform: uppercase; margin-bottom: 14px; }
+    .marque-name { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--cream); margin-bottom: 8px; line-height: 1.2; }
+    .marque-bio { font-size: 13px; color: var(--bone); line-height: 1.6; margin-bottom: 12px; }
+    .marque-cert { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--blue); }
+
+    .story { background: var(--gloss); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: center; }
+    @media (max-width: 960px) { .story-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .story-img { aspect-ratio: 4/5; background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 80%, var(--carbon) 110%); border-radius: 4px; padding: 56px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--cream); box-shadow: 0 30px 60px rgba(42, 83, 148, 0.25); position: relative; }
+    .story-img::before { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 2px; }
+    .story-img-yr { font-family: var(--serif); font-weight: 700; font-size: clamp(80px, 10vw, 130px); line-height: 0.9; letter-spacing: -0.03em; position: relative; color: var(--cream); }
+    .story-img-yr em { font-style: italic; color: var(--bone); }
+    .story-img-text { font-family: var(--serif); font-style: italic; font-size: 22px; margin-top: 18px; position: relative; color: var(--cream); }
+    .story-img-rule { width: 60px; height: 2px; background: var(--cream); margin: 22px 0 14px; opacity: 0.7; position: relative; }
+    .story-img-sub { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.85; position: relative; color: var(--cream); }
+    .story h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 4.2vw, 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--cream); margin-bottom: 24px; }
+    .story h2 em { font-style: italic; color: var(--blue); }
+    .story p { font-size: 17px; color: var(--bone); margin-bottom: 16px; line-height: 1.7; }
+    .story-quote { font-family: var(--serif); font-style: italic; font-size: 21px; color: var(--blue); padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 28px 0; line-height: 1.45; }
+    .story-attribution { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+
+    .faq { background: var(--carbon); }
+    .faq-list { max-width: 880px; margin: 0 auto; }
+    .faq-item { background: var(--gloss); border: 1px solid var(--line); border-radius: 4px; padding: 26px 30px; margin-bottom: 16px; }
+    .faq-q { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 10px; }
+    .faq-q::before { content: 'Q. '; color: var(--blue); }
+    .faq-a { font-size: 15px; color: var(--bone); line-height: 1.7; }
+    .faq-a::before { content: 'A. '; color: var(--blue); font-weight: 700; }
+
+    .reviews { background: var(--gloss-deep); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review { background: var(--carbon); border: 1px solid var(--line); border-radius: 4px; padding: 30px 28px; }
+    .review-stars { color: var(--blue); font-size: 16px; margin-bottom: 14px; letter-spacing: 0.08em; }
+    .review-quote { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--cream); line-height: 1.65; margin-bottom: 18px; }
+    .review-author { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; line-height: 1.6; }
+    .review-author strong { display: block; color: var(--cream); font-weight: 700; margin-bottom: 2px; font-size: 13px; }
+
+    .visit { background: var(--gloss); padding: 110px 0; text-align: center; }
+    .visit h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 4.2vw, 48px); color: var(--cream); margin-bottom: 22px; line-height: 1.1; }
+    .visit h2 em { font-style: italic; color: var(--blue); }
+    .visit p { font-size: 17px; color: var(--bone); max-width: 640px; margin: 0 auto 36px; line-height: 1.65; }
+    .visit-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .demo-notice { background: rgba(79, 124, 198, 0.07); border-left: 3px solid var(--blue); padding: 16px 22px; margin-top: 36px; max-width: 720px; margin-left: auto; margin-right: auto; font-size: 13px; color: var(--bone); line-height: 1.65; border-radius: 2px; text-align: left; }
+    .demo-notice strong { color: var(--blue); }
+
+    footer { background: var(--gloss-deep); padding: 80px 0 40px; border-top: 1px solid var(--line); }
+    .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 40px; }
+    @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .foot-grid { grid-template-columns: 1fr; } }
+    .foot-brand-name { font-family: var(--display); font-size: 22px; color: var(--cream); letter-spacing: 0.04em; margin-bottom: 14px; text-transform: uppercase; }
+    .foot-brand-sub { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .foot-col h4 { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 16px; }
+    .foot-col a, .foot-col span { display: block; color: var(--bone); font-size: 13px; padding: 5px 0; transition: color 0.2s; line-height: 1.5; }
+    .foot-col a:hover { color: var(--blue); }
+    .foot-bottom { padding-top: 28px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://performanceautocenter.com/#org",
+        "name": "Performance Auto Center",
+        "url": "https://performanceautocenter.com",
+        "logo": "https://performanceautocenter.com/logo.png",
+        "description": "Family-owned, two-partner independent specialist for BMW, Mercedes-Benz, Porsche, Lexus, and domestic high-end work, six miles southwest of O'Hare International Airport in Elk Grove Village Illinois, with a second partner-owned location in Plainfield serving the southwestern Chicago suburbs.",
+        "sameAs": [
+          "https://www.facebook.com/PerformanceAutoCenterIL"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://performanceautocenter.com/#craig",
+        "name": "Craig Behrens",
+        "jobTitle": "Partner, Owner-Operator (Elk Grove Village Location)",
+        "worksFor": { "@id": "https://performanceautocenter.com/#org" },
+        "description": "Partner and owner-operator of the Performance Auto Center Elk Grove Village flagship at 1051 Bonaventure Drive. ASE Master Certified for 12 years. Holds advanced manufacturer certifications in Acura, Honda, Lexus, and Toyota. Lives in Grayslake, Illinois with his wife Chrissie and two daughters, Hunter (24) and Ava (14).",
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "ASE Master Certified Technician",
+            "recognizedBy": { "@type": "Organization", "name": "National Institute for Automotive Service Excellence" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Acura Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "Acura" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Honda Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "American Honda Motor Co." }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Lexus Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "Lexus" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Toyota Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "Toyota Motor Sales USA" }
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://performanceautocenter.com/#pat",
+        "name": "Pat Kirchens",
+        "jobTitle": "Partner, Co-Owner (Plainfield Location)",
+        "worksFor": { "@id": "https://performanceautocenter.com/#org" },
+        "description": "Partner and co-owner of the Performance Auto Center Plainfield location. ASE Master Certified for 20-plus years. Holds advanced manufacturer certifications in BMW, Mercedes-Benz, and Porsche. 30 years in the automotive service industry.",
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "ASE Master Certified Technician",
+            "recognizedBy": { "@type": "Organization", "name": "National Institute for Automotive Service Excellence" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "BMW Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "BMW of North America" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Mercedes-Benz Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "Mercedes-Benz USA" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Porsche Advanced Manufacturer Certification",
+            "recognizedBy": { "@type": "Organization", "name": "Porsche Cars North America" }
+          }
+        ]
+      },
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://performanceautocenter.com/elk-grove-village/#store",
+        "name": "Performance Auto Center - Elk Grove Village (ORD-Adjacent Flagship)",
+        "parentOrganization": { "@id": "https://performanceautocenter.com/#org" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1051 Bonaventure Drive",
+          "addressLocality": "Elk Grove Village",
+          "addressRegion": "IL",
+          "postalCode": "60007",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-847-891-7787",
+        "email": "craig@performanceautocenter.com",
+        "url": "https://performanceautocenter.com/elk-grove-village",
+        "areaServed": ["Elk Grove Village", "Schaumburg", "Itasca", "Bensenville", "Wood Dale", "Des Plaines", "Park Ridge", "Hoffman Estates", "Inverness", "Barrington", "Addison", "Mount Prospect", "Arlington Heights", "Cook County", "DuPage County"]
+      },
+      {
+        "@type": "AutoRepair",
+        "@id": "https://performanceautocenter.com/elk-grove-village/#autorepair",
+        "name": "Performance Auto Center - Elk Grove Village",
+        "parentOrganization": { "@id": "https://performanceautocenter.com/#org" },
+        "url": "https://performanceautocenter.com/elk-grove-village",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1051 Bonaventure Drive",
+          "addressLocality": "Elk Grove Village",
+          "addressRegion": "IL",
+          "postalCode": "60007",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-847-891-7787",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "283",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://performanceautocenter.com/elk-grove-village/#localbusiness",
+        "name": "Performance Auto Center - Elk Grove Village Flagship",
+        "parentOrganization": { "@id": "https://performanceautocenter.com/#org" },
+        "url": "https://performanceautocenter.com/elk-grove-village",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1051 Bonaventure Drive",
+          "addressLocality": "Elk Grove Village",
+          "addressRegion": "IL",
+          "postalCode": "60007",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-847-891-7787"
+      },
+      {
+        "@type": "AutoRepair",
+        "@id": "https://performanceautocenter.com/plainfield/#autorepair",
+        "name": "Performance Auto Center - Plainfield",
+        "parentOrganization": { "@id": "https://performanceautocenter.com/#org" },
+        "url": "https://performanceautocenter.com/plainfield",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Plainfield",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "BMW Repair and Service",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Independent BMW service from a shop with Pat Kirchens's BMW advanced manufacturer certification on staff. Timing chain, suspension, electronics diagnostic, brake, and routine maintenance work on 3-series, 5-series, 7-series, X-series, and M-series platforms. Indie pricing 30 to 40 percent under dealer rates."
+      },
+      {
+        "@type": "Service",
+        "name": "Mercedes-Benz Repair and Service",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Independent Mercedes-Benz service from a shop with Pat Kirchens's Mercedes-Benz advanced manufacturer certification on staff. Air suspension, electronics diagnostic, transmission, brake, and routine maintenance work on C-class, E-class, S-class, G-Wagon, GLC / GLE / GLS, and AMG platforms."
+      },
+      {
+        "@type": "Service",
+        "name": "Porsche Repair and Service",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Independent Porsche service from a shop with Pat Kirchens's Porsche advanced manufacturer certification on staff. Pre-purchase inspection, suspension, electronics diagnostic, brake, and routine maintenance work on 911, Cayenne, Macan, Panamera, and Taycan platforms."
+      },
+      {
+        "@type": "Service",
+        "name": "Lexus Repair and Service",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Independent Lexus service from a shop with Craig Behrens's Lexus advanced manufacturer certification on staff. Hybrid service, electronics diagnostic, brake, and routine maintenance work on RX, NX, ES, IS, LS, and LX platforms."
+      },
+      {
+        "@type": "Service",
+        "name": "Acura, Honda, and Toyota Repair and Service",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Independent service for Acura, Honda, and Toyota platforms from a shop with Craig Behrens's advanced manufacturer certifications in all three on staff. Routine maintenance, electronics diagnostic, brake, suspension, and powertrain work."
+      },
+      {
+        "@type": "Service",
+        "name": "Brake, Suspension, and Electronics Diagnostic",
+        "provider": { "@id": "https://performanceautocenter.com/#org" },
+        "areaServed": "Chicago metropolitan area, Cook County, DuPage County",
+        "description": "Cross-marque brake replacement, suspension refresh, and electronics diagnostic work on luxury European and high-end domestic platforms."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How far is Performance Auto Center from O'Hare International Airport?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Performance Auto Center's Elk Grove Village flagship at 1051 Bonaventure Drive is roughly six miles southwest of O'Hare International Airport, in the densest corridor of luxury European vehicle ownership in the Chicago metro. A second partner-owned location operates in Plainfield, covering the southwestern Chicago suburbs catchment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Performance Auto Center independent, a chain, or a dealership?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Performance Auto Center is a family-owned, two-partner independent shop. It is not part of a national chain and not a dealership service department. Craig Behrens runs the Elk Grove Village location. Pat Kirchens co-owns the Plainfield location. The shop has operated under the Performance Auto Center brand for 50 years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the BMW, Mercedes-Benz, and Porsche specialist on staff?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pat Kirchens, the Plainfield-location partner and co-owner. Pat is ASE Master Certified for 20-plus years and holds advanced manufacturer certifications in BMW, Mercedes-Benz, and Porsche, plus 30 years in the industry. The three-marque advanced cert stack at a single independent shop is rare and verifiable on the Performance Auto Center staff page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the ASE Master technician at the Elk Grove Village location?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Craig Behrens, the Elk Grove Village partner and owner-operator. Craig is ASE Master Certified for 12 years and holds advanced manufacturer certifications in Acura, Honda, Lexus, and Toyota. He runs the day-to-day at the 1051 Bonaventure Drive flagship and lives in Grayslake with his wife Chrissie and two daughters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Performance Auto Center cost compared to a BMW or Mercedes dealer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Independent luxury European service pricing at Performance Auto Center typically runs 30 to 40 percent under dealer rates for the same line items, while keeping OEM or OE-equivalent parts and applying the same diagnostic process. The exact difference depends on the marque, the model year, and whether the work is routine maintenance or a powertrain or electronics diagnostic. Call the shop for an estimate on a specific job."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Performance Auto Center's CARFAX rating?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Performance Auto Center is rated 5 of 5 on the CARFAX Service Shop Directory across 283 reviews. CARFAX is the third-party platform new and used luxury European owners use to vet independent service shops before booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Performance Auto Center work on Porsche pre-purchase inspections?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pre-purchase inspections on 911, Cayenne, Macan, Panamera, and Taycan platforms are regular work at Performance Auto Center, with Pat Kirchens's Porsche advanced manufacturer certification on staff. The shop coordinates with sellers, dealers, and broker-of-record arrangements across the Chicago metro."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="announce">
+  Family-owned, ASE Master Certified, BMW / Mercedes / Porsche advanced certified <strong>six miles from O'Hare in Elk Grove Village.</strong>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="brand">
+      PERFORMANCE <em>Auto Center</em>
+      <small>Elk Grove Village &middot; Plainfield &middot; ORD-Adjacent Luxury European Specialist</small>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#partners">Partners</a>
+      <a href="#marques">Marques</a>
+      <a href="#story">Our Story</a>
+      <a href="#faq">FAQ</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#visit" class="cta-btn">Request a Quote &rarr;</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Elk Grove Village, Illinois &middot; Six Miles From O'Hare</span>
+      <h1>Family-owned BMW, Mercedes, Porsche, and Lexus specialist. <em>Six miles from O'Hare.</em></h1>
+      <p class="hero-sub">Performance Auto Center has run out of 1051 Bonaventure Drive in Elk Grove Village as a family-owned, owner-operated independent for 50 years. ASE Master Certified technicians on the floor. Craig Behrens with Acura, Honda, Lexus, and Toyota advanced certs. Pat Kirchens with BMW, Mercedes-Benz, and Porsche advanced certs and 30 years in the industry. Second partner-owned location in Plainfield. 5 of 5 on CARFAX across 283 reviews.</p>
+      <div class="hero-features">
+        <div class="hero-feature">50 years family-owned (founded 1976)</div>
+        <div class="hero-feature">ASE Master technicians</div>
+        <div class="hero-feature">BMW / Mercedes / Porsche advanced certified</div>
+        <div class="hero-feature">~6 mi from O'Hare International</div>
+      </div>
+      <div class="hero-actions">
+        <a href="#visit" class="cta-link primary">Request a Quote &rarr;</a>
+        <a href="#story" class="cta-link ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="hero-vis-eyebrow">FAMILY-OWNED</div>
+      <div class="hero-vis-num"><em>25+</em></div>
+      <div class="hero-vis-rule"></div>
+      <div class="hero-vis-mark">years in Elk Grove Village</div>
+      <div class="hero-vis-since">ASE Master &middot; BMW / MB / Porsche advanced</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div>
+      <span class="trust-num"><em>~6</em></span>
+      <div class="trust-lbl">Miles from O'Hare<br>Elk Grove Village flagship</div>
+    </div>
+    <div>
+      <span class="trust-num">25<em>+</em></span>
+      <div class="trust-lbl">Years family-owned<br>Two-partner operation</div>
+    </div>
+    <div>
+      <span class="trust-num">ASE</span>
+      <div class="trust-lbl">Master Certified<br>on both partners</div>
+    </div>
+    <div>
+      <span class="trust-num">7</span>
+      <div class="trust-lbl">Manufacturer advanced certs<br>BMW &middot; MB &middot; Porsche &middot; Lexus &middot; Acura &middot; Honda &middot; Toyota</div>
+    </div>
+    <div>
+      <span class="trust-num">5.0<em>/5</em></span>
+      <div class="trust-lbl">CARFAX rating<br>283 reviews</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Marques We Serve</span>
+      <h2 class="section-title">BMW, Mercedes-Benz, Porsche, <em>and Lexus.</em></h2>
+      <p class="section-sub">Four luxury marques tuned for the European or high-end Japanese owner who just rolled out of a dealership in Schaumburg, Hoffman Estates, Inverness, or downtown Chicago. Each serviced at indie pricing under the same roof.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-vis bmw">
+          <div class="service-tag">PAT</div>
+          <div class="service-frame">
+            <span class="service-label">BMW</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-name">BMW Repair</div>
+          <div class="service-note">Pat Kirchens BMW advanced cert. Timing chain, suspension, electronics diagnostic, brake, routine maintenance. 3-series, 5-series, X-series, M-series.</div>
+          <div class="service-row">
+            <span class="service-range">~30-40% under dealer</span>
+            <span class="service-size">Indie pricing</span>
+          </div>
+          <a href="#visit" class="service-cta">Request a Quote</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-vis mb">
+          <div class="service-tag">PAT</div>
+          <div class="service-frame">
+            <span class="service-label">Mercedes</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Mercedes-Benz Repair</div>
+          <div class="service-note">Pat Kirchens Mercedes-Benz advanced cert. Air suspension, electronics, transmission, brake, routine. C / E / S / GLC / GLE / GLS / G-Wagon / AMG.</div>
+          <div class="service-row">
+            <span class="service-range">~30-40% under dealer</span>
+            <span class="service-size">Indie pricing</span>
+          </div>
+          <a href="#visit" class="service-cta">Request a Quote</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-vis porsche">
+          <div class="service-tag">PAT</div>
+          <div class="service-frame">
+            <span class="service-label">Porsche</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Porsche Repair</div>
+          <div class="service-note">Pat Kirchens Porsche advanced cert. Pre-purchase inspection, suspension, electronics, brake, routine. 911, Cayenne, Macan, Panamera, Taycan.</div>
+          <div class="service-row">
+            <span class="service-range">PPI from $</span>
+            <span class="service-size">Call for estimate</span>
+          </div>
+          <a href="#visit" class="service-cta">Request a Quote</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-vis lexus">
+          <div class="service-tag steel-tag">CRAIG</div>
+          <div class="service-frame">
+            <span class="service-label">Lexus</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Lexus Repair</div>
+          <div class="service-note">Craig Behrens Lexus advanced cert. Hybrid service, electronics diagnostic, brake, routine maintenance. RX, NX, ES, IS, LS, LX, and the hybrid variants.</div>
+          <div class="service-row">
+            <span class="service-range">Custom</span>
+            <span class="service-size">By marque + model</span>
+          </div>
+          <a href="#visit" class="service-cta">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ord" class="ord-block">
+  <div class="container">
+    <div class="ord-grid">
+      <div>
+        <div class="ord-stat">~6</div>
+        <div class="ord-stat-label">Miles from O'Hare International Airport to the Elk Grove Village flagship. The densest luxury European catchment in the Midwest.</div>
+      </div>
+      <div class="ord-content">
+        <span class="eyebrow">The ORD Corridor</span>
+        <h2 class="section-title" style="margin-bottom: 22px;">The independent BMW, Mercedes, and Porsche shop closest to <em>the densest luxury European catchment in the Midwest.</em></h2>
+        <p>The Elk Grove Village flagship at 1051 Bonaventure Drive sits roughly six miles southwest of O'Hare International Airport. Around it: Schaumburg, Itasca, Bensenville, Wood Dale, Des Plaines, Park Ridge. West: Hoffman Estates, Inverness, Barrington. <strong>The densest corridor of BMW, Mercedes-Benz, and Porsche ownership in the Chicago metro.</strong></p>
+        <p>For the Schaumburg executive who picks up a new 3-series from a dealership in Wood Dale, the closest independent European specialist with BMW manufacturer advanced certification on staff is Performance Auto Center six miles away. Same for the Hoffman Estates Mercedes C-class owner. Same for the Inverness Porsche Macan owner. Same for the Barrington Cayenne driver who wants a pre-purchase inspection before a used-car deal closes.</p>
+        <div class="corridor-list">
+          <div class="corridor-list-title">ORD-Corridor Catchment</div>
+          <div class="corridor-row"><span>Elk Grove Village (60007)</span><span class="miles">Flagship</span></div>
+          <div class="corridor-row"><span>Schaumburg (60173)</span><span class="miles">~4 mi</span></div>
+          <div class="corridor-row"><span>Itasca (60143)</span><span class="miles">~3 mi</span></div>
+          <div class="corridor-row"><span>Bensenville (60106)</span><span class="miles">~3 mi</span></div>
+          <div class="corridor-row"><span>Wood Dale (60191)</span><span class="miles">~2 mi</span></div>
+          <div class="corridor-row"><span>Des Plaines (60018)</span><span class="miles">~4 mi</span></div>
+          <div class="corridor-row"><span>Park Ridge (60068)</span><span class="miles">~6 mi</span></div>
+          <div class="corridor-row"><span>Hoffman Estates (60169)</span><span class="miles">~7 mi</span></div>
+          <div class="corridor-row"><span>Inverness / Barrington</span><span class="miles">~9 mi</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locations" class="locations">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Two Locations &middot; Two Partner-Owners</span>
+      <h2 class="section-title">Elk Grove Village flagship. <em>Plainfield co-location.</em></h2>
+      <p class="section-sub">Family-owned, two-partner. The ORD-adjacent flagship anchors the northern Cook and DuPage catchment. The Plainfield co-location anchors the southwestern Chicago suburbs catchment.</p>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card">
+        <span class="location-flag flagship">ORD-Adjacent Flagship</span>
+        <div class="location-name">Performance Auto Center - Elk Grove Village</div>
+        <div class="location-year">Six miles from O'Hare International</div>
+        <div class="location-address">1051 Bonaventure Drive<br>Elk Grove Village, IL 60007</div>
+        <div class="location-address" style="color: var(--blue);">(847) 891-7787</div>
+        <div class="location-meta">Partner-owner: Craig Behrens, ASE Master Certified (12 yr), Acura / Honda / Lexus / Toyota advanced manufacturer certifications. Email: craig@performanceautocenter.com.</div>
+        <div class="location-services">
+          <span class="location-service-tag">BMW</span>
+          <span class="location-service-tag">Mercedes</span>
+          <span class="location-service-tag">Porsche</span>
+          <span class="location-service-tag">Lexus</span>
+          <span class="location-service-tag">Acura</span>
+          <span class="location-service-tag">Honda</span>
+          <span class="location-service-tag">Toyota</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <span class="location-flag">Southwestern Co-Location</span>
+        <div class="location-name">Performance Auto Center - Plainfield</div>
+        <div class="location-year">Southwestern Chicago suburbs catchment</div>
+        <div class="location-address">Plainfield, Illinois<br>(address verified at kickoff)</div>
+        <div class="location-meta">Partner / co-owner: Pat Kirchens, ASE Master Certified (20+ yr), BMW / Mercedes-Benz / Porsche advanced manufacturer certifications, 30 years in the industry. Email: pat@performanceautocenter.com.</div>
+        <div class="location-services">
+          <span class="location-service-tag">BMW</span>
+          <span class="location-service-tag">Mercedes</span>
+          <span class="location-service-tag">Porsche</span>
+          <span class="location-service-tag">Luxury European</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="partners">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Partners</span>
+      <h2 class="section-title">Craig Behrens. <em>Pat Kirchens.</em></h2>
+      <p class="section-sub">Two ASE Master Certified partner-owners. Seven manufacturer advanced certifications between them. 50-plus combined years in the industry. Both have built a career at Performance Auto Center, not at a dealership service department.</p>
+    </div>
+
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-portrait">
+          <div class="partner-portrait-name">Craig Behrens</div>
+          <div class="partner-portrait-tier">ASE MASTER &middot; 12 YR</div>
+        </div>
+        <div class="partner-name">Craig Behrens</div>
+        <div class="partner-title">Partner &middot; Owner-Operator, Elk Grove Village</div>
+        <div class="partner-bio">Craig is the Elk Grove Village partner. ASE Master Certified for 12 years. Holds advanced manufacturer certifications across four marques. Lives in Grayslake, Illinois with his wife Chrissie and two daughters, Hunter (24) and Ava (14).</div>
+        <div class="credentials">
+          <div class="credentials-title">Credentials</div>
+          <div class="credential">ASE Master Certified Technician (12 years)</div>
+          <div class="credential">Acura Advanced Manufacturer Certification</div>
+          <div class="credential">Honda Advanced Manufacturer Certification</div>
+          <div class="credential">Lexus Advanced Manufacturer Certification</div>
+          <div class="credential">Toyota Advanced Manufacturer Certification</div>
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-portrait">
+          <div class="partner-portrait-name">Pat Kirchens</div>
+          <div class="partner-portrait-tier">ASE MASTER &middot; 20+ YR</div>
+        </div>
+        <div class="partner-name">Pat Kirchens</div>
+        <div class="partner-title">Partner &middot; Co-Owner, Plainfield</div>
+        <div class="partner-bio">Pat is the Plainfield co-owner and the shop's luxury European specialist. ASE Master Certified for 20-plus years. Holds advanced manufacturer certifications in BMW, Mercedes-Benz, and Porsche at the same time, which is rare in the independent category. 30 years in the automotive service industry.</div>
+        <div class="credentials">
+          <div class="credentials-title">Credentials</div>
+          <div class="credential">ASE Master Certified Technician (20+ years)</div>
+          <div class="credential">BMW Advanced Manufacturer Certification</div>
+          <div class="credential">Mercedes-Benz Advanced Manufacturer Certification</div>
+          <div class="credential">Porsche Advanced Manufacturer Certification</div>
+          <div class="credential">30 years in the automotive service industry</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marques" class="marque-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">By the Marque</span>
+      <h2 class="section-title">Seven manufacturer advanced certifications. <em>Three luxury European, four high-end Japanese.</em></h2>
+      <p class="section-sub">Each marque-specific surface staffed by the partner whose advanced certification covers it. Pat owns the European bay. Craig owns the high-end Japanese bay. Cross-marque work flows across both locations.</p>
+    </div>
+
+    <div class="marque-grid">
+      <div class="marque-card">
+        <div class="marque-gen">European</div>
+        <div class="marque-name">BMW</div>
+        <div class="marque-bio">3-series, 5-series, 7-series, X-series, M-series. Timing chain, suspension, electronics diagnostic, brake, and routine maintenance.</div>
+        <div class="marque-cert">Pat Kirchens BMW advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">European</div>
+        <div class="marque-name">Mercedes-Benz</div>
+        <div class="marque-bio">C-class, E-class, S-class, GLC / GLE / GLS, G-Wagon, AMG. Air suspension, electronics, transmission, brake.</div>
+        <div class="marque-cert">Pat Kirchens Mercedes-Benz advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">European</div>
+        <div class="marque-name">Porsche</div>
+        <div class="marque-bio">911, Cayenne, Macan, Panamera, Taycan. Pre-purchase inspection, suspension, electronics, brake, routine.</div>
+        <div class="marque-cert">Pat Kirchens Porsche advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">Japanese</div>
+        <div class="marque-name">Lexus</div>
+        <div class="marque-bio">RX, NX, ES, IS, LS, LX, and the hybrid variants. Hybrid service, electronics diagnostic, brake, routine.</div>
+        <div class="marque-cert">Craig Behrens Lexus advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">Japanese</div>
+        <div class="marque-name">Acura</div>
+        <div class="marque-bio">TLX, RDX, MDX, Integra. Routine maintenance, electronics diagnostic, brake, suspension, powertrain.</div>
+        <div class="marque-cert">Craig Behrens Acura advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">Japanese</div>
+        <div class="marque-name">Honda</div>
+        <div class="marque-bio">Accord, Civic, CR-V, Pilot, Odyssey. Routine maintenance, electronics, brake, suspension.</div>
+        <div class="marque-cert">Craig Behrens Honda advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">Japanese</div>
+        <div class="marque-name">Toyota</div>
+        <div class="marque-bio">Camry, Highlander, RAV4, 4Runner, Tundra, Land Cruiser, and the hybrid variants. Routine, electronics, brake, suspension.</div>
+        <div class="marque-cert">Craig Behrens Toyota advanced cert</div>
+      </div>
+      <div class="marque-card">
+        <div class="marque-gen">Cross-Marque</div>
+        <div class="marque-name">Diagnostic + Brake + Suspension</div>
+        <div class="marque-bio">Cross-marque electronics diagnostic, brake replacement, and suspension refresh on luxury European and high-end Japanese platforms.</div>
+        <div class="marque-cert">ASE Master tier on both partners</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <div class="story-img-yr">25<em>+</em></div>
+        <div class="story-img-text">Years family-owned</div>
+        <div class="story-img-rule"></div>
+        <div class="story-img-sub">ELK GROVE VILLAGE &middot; PLAINFIELD</div>
+      </div>
+      <div>
+        <span class="eyebrow">The Story</span>
+        <h2>Two partners. <em>One family-owned shop.</em></h2>
+        <p>Performance Auto Center has operated under the same brand for 50 years in Elk Grove Village, Illinois. Family-owned. Owner-operated. Two partners between two locations. Craig Behrens runs the Elk Grove Village flagship at 1051 Bonaventure Drive. Pat Kirchens runs the Plainfield location.</p>
+        <p>The credential stack is what makes the shop unusual in the independent European category. ASE Master Certified is the tier the American auto-service industry uses to mark its most thoroughly tested technicians. Both partners hold it. Pat for 20-plus years, Craig for 12. Manufacturer advanced certification is the second tier, granted by the marque itself for advanced training on specific platforms. Pat holds it in BMW, Mercedes-Benz, and Porsche at the same time. Craig holds it in Acura, Honda, Lexus, and Toyota at the same time. Seven manufacturer advanced certifications, two ASE Master Certifications, 50-plus combined years on the floor.</p>
+        <div class="story-quote">"Family-owned and operated. ASE Master Certified. BMW, Mercedes-Benz, and Porsche advanced certified. Six miles from O'Hare."</div>
+        <div class="story-attribution">Performance Auto Center, 1051 Bonaventure Drive, Elk Grove Village, Illinois</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Frequently Asked</span>
+      <h2 class="section-title">Questions, <em>answered.</em></h2>
+      <p class="section-sub">If you are picking a shop tonight for a BMW timing chain in Schaumburg, a Mercedes air suspension in Hoffman Estates, a Porsche pre-purchase inspection in Inverness, or a Lexus hybrid service in Park Ridge, these are the answers the AI assistant in your phone should be giving you about Performance Auto Center.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How far is Performance Auto Center from O'Hare International Airport?</div>
+        <div class="faq-a">Performance Auto Center's Elk Grove Village flagship at 1051 Bonaventure Drive is roughly six miles southwest of O'Hare, in the densest corridor of luxury European vehicle ownership in the Chicago metro. A second partner-owned location operates in Plainfield, covering the southwestern Chicago suburbs catchment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is Performance Auto Center independent, a chain, or a dealership?</div>
+        <div class="faq-a">Performance Auto Center is a family-owned, two-partner independent shop. Not a national chain, not a dealership service department. Craig Behrens runs the Elk Grove Village location. Pat Kirchens co-owns the Plainfield location. The shop has operated under the Performance Auto Center brand for 50 years.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Who is the BMW, Mercedes-Benz, and Porsche specialist on staff?</div>
+        <div class="faq-a">Pat Kirchens, the Plainfield-location partner and co-owner. Pat is ASE Master Certified for 20-plus years and holds advanced manufacturer certifications in BMW, Mercedes-Benz, and Porsche, plus 30 years in the industry. The three-marque advanced cert stack at a single independent shop is rare and verifiable on the staff page.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Who is the ASE Master technician at the Elk Grove Village location?</div>
+        <div class="faq-a">Craig Behrens, the Elk Grove Village partner and owner-operator. Craig is ASE Master Certified for 12 years and holds advanced manufacturer certifications in Acura, Honda, Lexus, and Toyota. He runs the day-to-day at 1051 Bonaventure Drive.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does Performance Auto Center cost compared to a BMW or Mercedes dealer?</div>
+        <div class="faq-a">Independent luxury European service pricing typically runs 30 to 40 percent under dealer rates for the same line items, while keeping OEM or OE-equivalent parts and applying the same diagnostic process. The exact difference depends on the marque, the model year, and whether the work is routine maintenance or a powertrain or electronics diagnostic. Call the shop for an estimate on a specific job.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does Performance Auto Center do Porsche pre-purchase inspections?</div>
+        <div class="faq-a">Yes. Pre-purchase inspections on 911, Cayenne, Macan, Panamera, and Taycan platforms are regular work at Performance Auto Center, with Pat Kirchens's Porsche advanced manufacturer certification on staff. The shop coordinates with sellers, dealers, and broker-of-record arrangements across the Chicago metro.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is Performance Auto Center's CARFAX rating?</div>
+        <div class="faq-a">Performance Auto Center is rated 5 of 5 on the CARFAX Service Shop Directory across 283 reviews. CARFAX is the third-party platform new and used luxury European owners use to vet independent service shops before booking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">From the Shop Floor</span>
+      <h2 class="section-title">5 of 5 across <em>283 CARFAX reviews.</em></h2>
+      <p class="section-sub">Pulled from the CARFAX Service Shop Directory and verified Google reviews. Production version of this page pulls 6 to 12 verified reviews with reviewer permission.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="review-quote">Production version pulls a verified CARFAX or Google review here, with reviewer permission, surfaced from the 283-review pool that backs the 5 of 5 rating.</div>
+        <div class="review-author"><strong>Verified review, slot 1</strong>CARFAX or Google &middot; Performance Auto Center</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="review-quote">Production version pulls a verified CARFAX or Google review here, with reviewer permission, weighted toward marque-specific quotes (BMW, Mercedes, Porsche).</div>
+        <div class="review-author"><strong>Verified review, slot 2</strong>CARFAX or Google &middot; Performance Auto Center</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="review-quote">Production version pulls a verified CARFAX or Google review here, with reviewer permission, weighted toward ORD-corridor and indie-versus-dealer pricing quotes.</div>
+        <div class="review-author"><strong>Verified review, slot 3</strong>CARFAX or Google &middot; Performance Auto Center</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <h2>Book the next service. <em>Either location.</em></h2>
+    <p>Elk Grove Village flagship: 1051 Bonaventure Drive, six miles from O'Hare, Craig Behrens on the floor. Plainfield co-location: Pat Kirchens on the floor for the southwestern Chicago suburbs catchment and the BMW / Mercedes / Porsche advanced bay.</p>
+    <div class="visit-actions">
+      <a href="mailto:craig@performanceautocenter.com" class="cta-link primary">Email Elk Grove Village &rarr;</a>
+      <a href="mailto:pat@performanceautocenter.com" class="cta-link ghost">Email Plainfield &rarr;</a>
+      <a href="tel:+18478917787" class="cta-link ghost">Call (847) 891-7787 &rarr;</a>
+    </div>
+    <div class="demo-notice">
+      <strong>Demo notice.</strong> This is a demo of an AEO-optimized Performance Auto Center site. Real production deployment ships with a photographer on site, real review pulls with reviewer permission, and the founding-year detail (50 years vs 50 years from one third-party source) confirmed at kickoff. We never AI-generate sample bay or vehicle photos.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand-name">Performance Auto Center</div>
+        <div class="foot-brand-sub">Family-owned, two-partner independent BMW, Mercedes-Benz, Porsche, Lexus, Acura, Honda, and Toyota specialist. ASE Master Certified. Six miles from O'Hare. 5 of 5 on CARFAX across 283 reviews.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Locations</h4>
+        <a href="#locations">Elk Grove Village (Flagship)</a>
+        <a href="#locations">Plainfield (Co-Location)</a>
+      </div>
+      <div class="foot-col">
+        <h4>Marques</h4>
+        <a href="#marques">BMW &middot; Mercedes-Benz</a>
+        <a href="#marques">Porsche &middot; Lexus</a>
+        <a href="#marques">Acura &middot; Honda &middot; Toyota</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:craig@performanceautocenter.com">craig@performanceautocenter.com</a>
+        <a href="mailto:pat@performanceautocenter.com">pat@performanceautocenter.com</a>
+        <a href="tel:+18478917787">(847) 891-7787</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; Performance Auto Center &middot; 1051 Bonaventure Drive, Elk Grove Village, IL 60007</span>
+      <span>Demo built by AG1 Consulting &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/#services" style="color: var(--blue);">andrei170.github.io/ag1</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
