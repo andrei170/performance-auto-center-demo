@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Audit &middot; Performance Auto Center &middot; Elk Grove Village &amp; Plainfield IL</title>
+  <meta name="description" content="Independent SEO audit for Performance Auto Center. Three structural findings on why a 50-year, 5/5 CARFAX, ASE Master shop is invisible to AI search and luxury-European directories. Prepared by Andrei Givero of AG1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gloss: #0a0d14;
+      --gloss-deep: #050810;
+      --carbon: #131722;
+      --carbon-light: #1c2230;
+      --line: #2f3648;
+      --bone: #ececef;
+      --cream: #f7f4ec;
+      --muted: #8a90a0;
+      --blue: #4f7cc6;
+      --blue-deep: #2a5394;
+      --blue-soft: rgba(79, 124, 198, 0.16);
+      --chrome: #c7ccd6;
+      --chrome-deep: #8d94a3;
+      --amber: #d4a45a;
+      --display: 'Oswald', sans-serif;
+      --serif: 'Source Serif Pro', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--gloss); color: var(--bone); font-family: var(--sans); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--chrome); }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .announce { background: var(--gloss-deep); color: var(--muted); padding: 11px 0; text-align: center; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+    .announce strong { color: var(--blue); letter-spacing: 0.2em; }
+
+    header { background: var(--gloss-deep); padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .brand { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--cream); letter-spacing: 0.06em; text-transform: uppercase; }
+    .brand em { font-family: var(--serif); font-style: italic; color: var(--blue); font-weight: 600; text-transform: none; font-size: 16px; }
+    .brand small { display: block; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+
+    .hero { padding: 80px 0 60px; background: radial-gradient(circle at 25% 25%, var(--carbon-light) 0%, var(--gloss) 60%); }
+    .eyebrow { display: inline-block; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 18px; }
+    h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -0.02em; color: var(--cream); margin-bottom: 24px; }
+    h1 em { font-style: italic; color: var(--blue); }
+    .hero-sub { font-size: 17px; color: var(--bone); max-width: 760px; line-height: 1.7; margin-bottom: 28px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 28px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; border-top: 1px solid var(--line); padding-top: 22px; }
+    .meta strong { color: var(--cream); font-weight: 600; }
+
+    section { padding: 68px 0; border-top: 1px solid var(--line); }
+    .section-num { font-family: var(--display); font-size: 12px; letter-spacing: 0.32em; color: var(--blue); font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
+    h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; color: var(--cream); margin-bottom: 22px; letter-spacing: -0.01em; }
+    h2 em { font-style: italic; color: var(--blue); }
+    h3 { font-family: var(--display); font-size: 17px; font-weight: 600; color: var(--cream); letter-spacing: 0.04em; margin: 28px 0 12px; text-transform: uppercase; }
+    p { font-size: 16px; color: var(--bone); margin-bottom: 18px; line-height: 1.75; }
+    p.lead { font-size: 17px; color: var(--cream); }
+
+    .findings-stack { display: grid; gap: 22px; margin-top: 36px; }
+    .finding-card { background: var(--carbon); border: 1px solid var(--line); border-left: 3px solid var(--blue); padding: 28px 30px; border-radius: 2px; }
+    .finding-card h3 { margin-top: 0; color: var(--cream); font-size: 15px; }
+    .finding-card p { font-size: 15px; margin-bottom: 0; color: var(--bone); }
+    .finding-card .tag { display: inline-block; font-family: var(--display); font-size: 10px; letter-spacing: 0.22em; color: var(--amber); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
+
+    .num-list { counter-reset: finding; display: grid; gap: 18px; margin-top: 30px; }
+    .num-item { counter-increment: finding; background: var(--carbon); border: 1px solid var(--line); padding: 24px 28px 24px 80px; border-radius: 2px; position: relative; }
+    .num-item::before { content: counter(finding, decimal-leading-zero); position: absolute; left: 24px; top: 22px; font-family: var(--display); font-size: 26px; font-weight: 700; color: var(--blue); letter-spacing: -0.02em; }
+    .num-item h3 { margin: 0 0 10px; font-size: 15px; }
+    .num-item p { font-size: 15px; margin-bottom: 8px; }
+    .num-item .why { display: block; font-size: 13px; color: var(--muted); font-style: italic; margin-top: 8px; }
+    .num-item .fix { display: block; font-size: 13px; color: var(--chrome); margin-top: 6px; letter-spacing: 0.02em; }
+    .num-item .fix strong { color: var(--blue); font-weight: 600; }
+    .flag { display: inline-block; background: rgba(212, 164, 90, 0.12); border: 1px solid rgba(212, 164, 90, 0.4); color: var(--amber); font-size: 11px; letter-spacing: 0.14em; padding: 3px 9px; border-radius: 2px; text-transform: uppercase; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+
+    .comp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 28px; }
+    @media (max-width: 800px) { .comp-grid { grid-template-columns: 1fr; } }
+    .comp-card { background: var(--carbon); border: 1px solid var(--line); padding: 22px 24px; border-radius: 2px; }
+    .comp-card h3 { font-size: 14px; margin: 0 0 8px; color: var(--cream); }
+    .comp-card .loc { font-size: 11px; color: var(--blue); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; margin-bottom: 12px; }
+    .comp-card p { font-size: 14px; margin-bottom: 0; color: var(--bone); line-height: 1.65; }
+
+    .phase { background: var(--carbon); border: 1px solid var(--line); padding: 30px 32px; border-radius: 2px; margin-top: 24px; }
+    .phase-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+    .phase-num { font-family: var(--display); font-size: 13px; letter-spacing: 0.28em; color: var(--blue); font-weight: 700; text-transform: uppercase; }
+    .phase-title { font-family: var(--serif); font-size: 21px; color: var(--cream); font-weight: 600; }
+    .phase-days { font-size: 12px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-left: auto; }
+    .phase ul { list-style: none; padding: 0; }
+    .phase ul li { font-size: 15px; color: var(--bone); padding: 10px 0 10px 24px; position: relative; border-bottom: 1px solid rgba(47, 54, 72, 0.5); line-height: 1.6; }
+    .phase ul li:last-child { border-bottom: none; }
+    .phase ul li::before { content: '\25B8'; position: absolute; left: 0; top: 10px; color: var(--blue); font-size: 14px; }
+    .phase ul li strong { color: var(--cream); font-weight: 600; }
+
+    .close { padding: 70px 0 50px; background: var(--gloss-deep); border-top: 1px solid var(--line); text-align: center; }
+    .close h2 { margin-bottom: 18px; }
+    .close p { max-width: 640px; margin: 0 auto 28px; color: var(--bone); }
+    .cta-btn { display: inline-block; background: var(--blue); color: var(--cream); padding: 16px 32px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; border: 2px solid var(--blue); transition: all 0.2s; }
+    .cta-btn:hover { background: var(--blue-deep); border-color: var(--blue-deep); color: var(--cream); }
+    .back-link { display: inline-block; margin-top: 24px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .back-link:hover { color: var(--blue); }
+
+    footer { background: var(--gloss-deep); padding: 36px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
+    footer strong { color: var(--cream); }
+    footer a { color: var(--blue); }
+  </style>
+</head>
+<body>
+
+  <div class="announce">Independent SEO Audit &middot; Prepared by <strong>Andrei Givero / AG1</strong> &middot; May 2026</div>
+
+  <header>
+    <div class="container">
+      <div class="brand">Performance Auto Center <em>SEO Audit</em><small>Elk Grove Village &middot; Plainfield IL</small></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Section 01 &middot; Executive Summary</span>
+      <h1>Your credential stack <em>is buried by the platform</em>.</h1>
+      <p class="hero-sub">Fifty years family-owned. ASE Master Certified across both partners. CARFAX 5 of 5 across 283 verified reviews. None of it shows up in the places engines and AI scrapers actually read. This audit isolates the three structural reasons.</p>
+      <div class="meta">
+        <span><strong>Prepared for:</strong> Craig Behrens &amp; Pat Kirchens</span>
+        <span><strong>Site audited:</strong> performanceautocenter.com</span>
+        <span><strong>Locations:</strong> 1051 Bonaventure Dr, EGV IL 60007 &middot; Plainfield IL</span>
+        <span><strong>Date:</strong> May 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="lead">Three findings sit on top of everything else. They are not opinions. Each one is verifiable from your live site this week.</p>
+
+      <div class="findings-stack">
+        <div class="finding-card">
+          <span class="tag">Finding 01 &middot; Structural</span>
+          <h3>The LinkNow Media template is the ceiling.</h3>
+          <p>Your site runs on a LinkNow Media platform (MX records confirm: mail3.linknowmedia.cloud and mail4.linknowmedia.cloud). LinkNow templates ship with locked title-tag patterns, no per-page schema control, and limited sitemap access. Until the platform changes, every SEO recommendation downstream is capped by what LinkNow will let you publish.</p>
+        </div>
+        <div class="finding-card">
+          <span class="tag">Finding 02 &middot; Directories</span>
+          <h3>You are absent from BimmerShops, BenzShops, and Pcarwise.</h3>
+          <p>These are the three directories AI search engines (ChatGPT, Perplexity, Claude) scrape when a user asks for an independent European-marque shop in a metro. Your direct local competitors Mehta Motors and 7th Gear appear in BimmerShops. You do not. This is the root cause of the 0-of-5 AEO result on luxury-European queries near Elk Grove Village.</p>
+        </div>
+        <div class="finding-card">
+          <span class="tag">Finding 03 &middot; Schema</span>
+          <h3>Your 5 of 5 / 283 CARFAX reviews are invisible to engines.</h3>
+          <p>No AggregateRating schema is published anywhere on the site. The single strongest reputational signal in your entire pipeline currently exists only as text inside a CARFAX widget. Search engines and AI scrapers cannot read it. Adding the schema is a one-day technical job that surfaces the strongest moat you have.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-num">Section 02 &middot; Technical and On-Page Findings</span>
+      <h2>What is actually on the page <em>versus what should be</em>.</h2>
+      <p>Each finding below is observable from the public site as of audit date. Eight items, ordered by remediation priority.</p>
+
+      <div class="num-list">
+
+        <div class="num-item">
+          <h3>LinkNow Media template caps schema and title-tag control</h3>
+          <p>MX lookup confirms LinkNow infrastructure. Their templates do not expose per-page JSON-LD insertion, custom sitemap rules, or canonical title-tag overrides at the level needed for AEO and luxury-marque ranking.</p>
+          <span class="why">Why it matters: every fix below either gets shipped properly on a real platform or gets shipped as a workaround that engines deprioritize.</span>
+          <span class="fix"><strong>Fix:</strong> Phase 2 platform-migration assessment to WordPress or Webflow. Preserve URLs, redirect map, content. Estimated 14 day project.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>Not listed on BimmerShops, BenzShops, or Pcarwise</h3>
+          <p>The three directories AI engines pull from for European-marque independent shop recommendations. Submission is free or low-cost and takes under a week to propagate.</p>
+          <span class="why">Why it matters: this single action is the highest-impact week in the entire 60 day plan. It closes the AEO gap that is currently sending European-marque searches to Mehta Motors and 7th Gear.</span>
+          <span class="fix"><strong>Fix:</strong> Day 1 submission to BimmerShops Elite tier, BenzShops, Pcarwise. Apply for any verification badges available.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>No AggregateRating schema for CARFAX 5 of 5 / 283 reviews</h3>
+          <p>The CARFAX score is the strongest verifiable third-party reputational signal in the file. It does not appear in JSON-LD anywhere on the site, so it cannot show up as a star rating in Google results or get cited by AI engines.</p>
+          <span class="why">Why it matters: this is the lowest-effort, highest-credibility win on the page. One schema block, immediately citable by every AI engine that reads structured data.</span>
+          <span class="fix"><strong>Fix:</strong> AggregateRating JSON-LD with ratingValue 5, reviewCount 283, sourced URL pointing to the CARFAX listing. Ship Day 1.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>No AutomotiveBusiness, Person, or Service schema</h3>
+          <p>Pat Kirchens holds ASE Master plus advanced certifications on BMW, Mercedes-Benz, and Porsche across 30 years in the industry. Craig Behrens holds ASE Master plus Acura, Honda, Lexus, Toyota advanced. None of it is structured for machines to read.</p>
+          <span class="why">Why it matters: engines cite people, not pages. Without Person schema and EducationalOccupationalCredential nodes per certification, the partners are invisible to entity-based ranking.</span>
+          <span class="fix"><strong>Fix:</strong> Deploy AutomotiveBusiness plus AutoRepair plus 2x Person (Craig, Pat) plus EducationalOccupationalCredential nodes for each ASE Master and marque-specific certification. Phase 1.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>EGV and Plainfield need separate LocalBusiness schemas</h3>
+          <p>Two locations currently share most public-facing infrastructure. Each needs its own LocalBusiness JSON-LD with distinct NAP (Name, Address, Phone), distinct GBP linkage, and distinct service-area markup.</p>
+          <span class="why">Why it matters: Google treats multi-location shops as separate entities. Sharing schema or NAP across both halves the ranking power of each.</span>
+          <span class="fix"><strong>Fix:</strong> Two LocalBusiness blocks, deployed alongside each location landing page. Phase 1.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>Homepage title tag is generic</h3>
+          <p>The current title does not mention BMW, Mercedes, Porsche, Lexus, the 50 year history, or Elk Grove Village. It reads as a placeholder. Title tag is still one of the strongest on-page ranking signals for local intent.</p>
+          <span class="why">Why it matters: the title tag is the single most-edited field in any SEO sprint. Fixing it costs ten minutes and lifts CTR on every existing impression.</span>
+          <span class="fix"><strong>Fix:</strong> Rewrite to "BMW Mercedes Porsche Lexus Specialist EGV IL &middot; 50 Years Family-Owned &middot; Performance Auto Center" or a tested variant. Phase 1.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>Plainfield exact street address not surfaced <span class="flag">Kickoff Flag</span></h3>
+          <p>The Plainfield location appears in references but the exact street address could not be verified from the public site during this audit.</p>
+          <span class="why">Why it matters: NAP consistency is the foundation of local SEO. Address mismatches across GBP, schema, and the site itself collapse local ranking authority.</span>
+          <span class="fix"><strong>Fix:</strong> Confirm Plainfield street address at kickoff. Apply identically across schema, GBP, footer, and contact page.</span>
+        </div>
+
+        <div class="num-item">
+          <h3>GBP optimization needed for both locations</h3>
+          <p>Both Google Business Profile listings need: claim verification, service categories aligned to BMW / Mercedes-Benz / Porsche / Lexus specialist intent, post cadence reactivated, photo refresh, and Q and A seeded with the questions luxury-marque owners actually ask.</p>
+          <span class="why">Why it matters: GBP is where 70 percent of local intent currently converts before users ever reach the site.</span>
+          <span class="fix"><strong>Fix:</strong> Audit, claim, and optimize both GBP listings. Phase 1.</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-num">Section 03 &middot; Competitor SEO Snapshot</span>
+      <h2>Where the search traffic <em>is going instead</em>.</h2>
+      <p>Three direct competitors observed during audit. Each one has at least one structural advantage Performance Auto Center does not currently match.</p>
+
+      <div class="comp-grid">
+        <div class="comp-card">
+          <h3>Eric's Auto Lab</h3>
+          <span class="loc">Schaumburg IL &middot; Porsche</span>
+          <p>Per-marque landing pages built out to depth. URL structure groups vehicles by make. The structural advantage is page count: more indexable pages dedicated to specific marques means more entry points for long-tail queries.</p>
+        </div>
+        <div class="comp-card">
+          <h3>Mehta Motors</h3>
+          <span class="loc">Chicago Area &middot; BMW</span>
+          <p>Listed on BimmerShops directory. Appears in AI search results for "independent BMW shop near O'Hare" queries that Performance Auto Center is currently absent from. Directory presence is the structural advantage.</p>
+        </div>
+        <div class="comp-card">
+          <h3>7th Gear</h3>
+          <span class="loc">Chicago Area &middot; BMW</span>
+          <p>Also indexed on BimmerShops. Same structural advantage as Mehta. Together they account for most of the BMW-specific AEO traction in the EGV / Schaumburg metro.</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px;">Read in reverse: Performance Auto Center has stronger heritage (50 years versus most competitors under 25), stronger credentialing (dual ASE Master with marque advanced certs), and stronger third-party reputation (CARFAX 5 of 5 / 283). The competitive disadvantage is not the shop. It is the infrastructure layer that surfaces the shop.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-num">Section 04 &middot; 60-Day Action Plan</span>
+      <h2>Three phases. <em>Sequenced by impact.</em></h2>
+      <p>Each phase compounds the previous one. Phase 1 alone closes most of the AEO and credibility gap. Phases 2 and 3 widen the moat.</p>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-num">Phase 01</span>
+          <span class="phase-title">Foundation and Directory Capture</span>
+          <span class="phase-days">Days 1 to 14</span>
+        </div>
+        <ul>
+          <li><strong>Day 1:</strong> Submit to BimmerShops Elite tier, BenzShops, Pcarwise. Highest single-week impact in the plan.</li>
+          <li><strong>Day 1 to 3:</strong> Deploy AggregateRating JSON-LD for the CARFAX 5 of 5 / 283 review count. Immediate citation upgrade for AI engines.</li>
+          <li><strong>Day 4 to 7:</strong> Ship full schema stack: AutomotiveBusiness, AutoRepair, 2x Person (Craig, Pat), 2x LocalBusiness (EGV and Plainfield with distinct NAPs), EducationalOccupationalCredential per ASE Master and marque-specific cert.</li>
+          <li><strong>Day 7 to 10:</strong> Rewrite homepage title tag, meta description, and H1 to include marque list, EGV, and 50-year heritage.</li>
+          <li><strong>Day 10 to 14:</strong> Claim and optimize both Google Business Profiles. Confirm Plainfield exact street address at kickoff and apply consistently across GBP, schema, footer, contact page.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-num">Phase 02</span>
+          <span class="phase-title">Platform and Per-Marque Depth</span>
+          <span class="phase-days">Days 15 to 30</span>
+        </div>
+        <ul>
+          <li><strong>Days 15 to 18:</strong> Platform migration assessment. Scope the LinkNow to WordPress or Webflow move. Build URL preservation map, identify content that needs porting, set redirect plan.</li>
+          <li><strong>Days 18 to 25:</strong> Build per-marque landing pages: BMW, Mercedes-Benz, Porsche, Lexus. Each page targets its marque-specific service queries (oil service intervals, common repair intent, certification visibility).</li>
+          <li><strong>Days 25 to 30:</strong> Build Craig Behrens and Pat Kirchens credential pages. Each includes full ASE Master detail, marque-specific advanced certs, years in industry, and a verifiable third-party reference where one exists. These are the pages AI engines cite when asked "who works on Porsche in EGV".</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-num">Phase 03</span>
+          <span class="phase-title">Authority and Link Equity</span>
+          <span class="phase-days">Days 31 to 60</span>
+        </div>
+        <ul>
+          <li><strong>Days 31 to 38:</strong> Build the 50-year heritage authority page. Founded 1976. Family ownership lineage. Verifiable via Yellowpages cross-reference. This is the page that earns links and gets cited in any "oldest independent shop" query.</li>
+          <li><strong>Days 38 to 50:</strong> Link acquisition outreach to BMW CCA, Mercedes-Benz Club of America, and Porsche Club of America local chapters. Independent specialist shops are exactly what these chapters' members are looking for. Sponsorship and event partnership where available.</li>
+          <li><strong>Days 50 to 60:</strong> CARFAX integration extension. Surface individual review excerpts on-page in a way that creates additional indexable Review schema, beyond the aggregate. Set the baseline Google Search Console performance report for ongoing measurement.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="container">
+      <h2>Ready to move <em>on Phase 1</em>?</h2>
+      <p>This audit is yours. No obligation, no follow-up sequence. If the three structural findings make sense and the 60-day plan looks like the right sequence, the next step is a 20-minute kickoff to confirm Plainfield address details and scope Phase 1 deployment.</p>
+      <a href="https://andrei170.github.io/ag1/#services" class="cta-btn">Schedule Kickoff &middot; AG1</a>
+      <div><a href="../index.html" class="back-link">&larr; Back to main brief</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <strong>All recommendations reviewed by Performance Auto Center prior to production.</strong><br>
+      Search metrics estimated from observable signals; baseline established via Google Search Console at kickoff.<br><br>
+      Prepared by Andrei Givero &middot; AG1 &middot; <a href="mailto:info@andreicopy.net">info@andreicopy.net</a> &middot; <a href="https://andrei170.github.io/ag1/#services">andrei170.github.io/ag1/#services</a>
+    </div>
+  </footer>
+
+</body>
+</html>
